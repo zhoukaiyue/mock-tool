@@ -1,0 +1,36 @@
+{
+    "name": "mock_tool",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "使用eslint校验所有报错文件": "⬇",
+        "lint:eslint": "npx eslint .",
+        "自动修复所有格式引起的报错": "⬇",
+        "lint:eslintFix": "npx eslint . --fix",
+        "使用 Prettier 格式化所有文件": "⬇",
+        "lint:prettier": "npx prettier --write ."
+    },
+    "keywords": [
+        "node",
+        "+",
+        "eslint",
+        "+",
+        "prettier"
+    ],
+    "author": "zhoukai",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "8.17.0",
+        "eslint-config-standard": "17.0.0",
+        "eslint-plugin-import": "2.26.0",
+        "eslint-plugin-n": "15.2.1",
+        "eslint-plugin-promise": "6.0.0",
+        "prettier": "2.6.2"
+    },
+    "dependencies": {
+        "express": "4.18.1"
+    }
+}
