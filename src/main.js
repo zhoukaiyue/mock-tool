@@ -2,9 +2,15 @@
 //express_demo.js 文件
 var express = require('express')
 var app = express()
+var path = require('path')
 
-app.get('/', function (req, res) {
-    res.send('Hello World')
+//导入工具函数：读取指定目录下所有文件
+const $fs = require('./util/fs')
+//导出所有项目的功能接口模块
+var filesList = []
+$fs.readFileList(path.join(__dirname, '..', 'src/project'), filesList)
+filesList.forEach((f) => {
+    app.use(require(f))
 })
 
 app.listen(8081, function () {
