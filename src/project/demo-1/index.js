@@ -18,6 +18,13 @@ router.post('/agent_goods/goods/', function (req, res) {
     const data = require('../../json/demo-1/agent_goods.json')
     res.status(500).send(data)
 })
-
+router.get('/agent_goods/goods/', function (req, res) {
+    // 通过 req.query 获取客户端通过查询字符串，发送到服务器的数据
+    const query = req.query //get请求用req.query，post请求用req.body
+    console.log(query)
+    // 调用res.send()方法，向客户端响应处理的结果
+    const data = require('../../json/demo-1/agent_goods.json')
+    res.status(500).send(data)
+})
 // 把 router 这个函数暴露出去
 module.exports = router //注意：这里是exports不是export
